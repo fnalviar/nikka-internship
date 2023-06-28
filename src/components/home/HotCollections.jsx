@@ -15,9 +15,6 @@ const HotCollections = () => {
         "https://us-central1-nft-cloud-functions.cloudfunctions.net/hotCollections"
       );
       setHotCollectionList(data);
-      console.log("data", data);
-    } catch (error) {
-      console.log(error.message);
     } finally {
       setLoading(false);
     }
