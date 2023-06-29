@@ -3,7 +3,7 @@ import Countdown from "./Countdown";
 
 export default function NewItemCard({ nft }) {
   return (
-    <div className="nft__item" key={nft.id}>
+    <div className="nft__item">
       <div className="author_list_pp">
         <Link
           to={`/author/${nft.authorId}`}
