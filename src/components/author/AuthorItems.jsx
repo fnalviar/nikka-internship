@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 const AuthorItems = ({ authorNft, authorImage }) => {
+  const nftCollection = authorNft.nftCollection;
   return (
     <div className="de_tab_content">
       <div className="tab-1">

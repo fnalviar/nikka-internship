@@ -97,7 +97,7 @@ const NewItems = () => {
             >
               {newItems &&
                 newItems.map((newNFT) => {
-                  return <NewItemCard key={newNFT.nftId} nft={newNFT} />;
+                  return <NewItemCard  key={newNFT.nftId}  nft={newNFT} />;
                 })}
             </ReactOwlCarousel>
           )}
