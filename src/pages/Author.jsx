@@ -73,9 +73,6 @@ const Author = () => {
                             <span id="wallet" className="profile_wallet">
                               <Skeleton width="250px" />
                             </span>
-                            <button id="btn_copy" title="Copy Text">
-                              Copy
-                            </button>
                           </h4>
                         </div>
                       </div>
