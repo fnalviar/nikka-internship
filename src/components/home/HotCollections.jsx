@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ReactOwlCarousel from "react-owl-carousel";
 import { Link } from "react-router-dom";
 import Skeleton from "../UI/Skeleton";
+import HotCollectionsSkeleton from "../UI/HotCollectionsSkeleton";
 
 const HotCollections = () => {
   const [loading, setLoading] = useState(false);
@@ -62,22 +63,7 @@ const HotCollections = () => {
               }}
             >
               {new Array(4).fill(0).map((_, index) => (
-                <div key={index}>
-                  <div className="nft_coll">
-                    <div className="nft_wrap">
-                      <Skeleton width="100%" height="200px" />
-                    </div>
-                    <div className="nft_coll_pp">
-                      <Skeleton width="50px" height="50px" borderRadius="50%" />
-                      <i className="fa fa-check"></i>
-                    </div>
-                    <div className="nft_coll_info">
-                      <Skeleton width="100px" height="20px" />
-                      <br />
-                      <Skeleton width="60px" height="20px" />
-                    </div>
-                  </div>
-                </div>
+                <HotCollectionsSkeleton key={index} />
               ))}
             </ReactOwlCarousel>
           )}
