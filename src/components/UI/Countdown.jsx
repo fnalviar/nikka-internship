@@ -28,13 +28,11 @@ export default function Countdown({ nftInfo }) {
 
   return (
     <>
-      {timeRemaining.milliseconds > 0 ? (
+      {timeRemaining.milliseconds > 0 && (
         <div className="de_countdown">
           {timeRemaining.hours}h {timeRemaining.minutes}m{" "}
           {timeRemaining.seconds}s
         </div>
-      ) : (
-        <div className="de_countdown">EXPIRED</div>
       )}
     </>
   );
