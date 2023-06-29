@@ -1,13 +1,19 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const BrowseByCategory = () => {
-  
+  AOS.init();
 
   return (
     <section id="section-category" className="no-top">
-      <div className="container">
+      <div className="container"
+      data-aos="fade-left"
+      data-aos-easing="ease-in"
+      data-aos-delay="100"
+      >
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">

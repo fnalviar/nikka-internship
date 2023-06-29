@@ -2,10 +2,13 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ReactOwlCarousel from "react-owl-carousel";
 import { Link } from "react-router-dom";
-import Skeleton from "../UI/Skeleton";
 import HotCollectionsSkeleton from "../UI/HotCollectionsSkeleton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HotCollections = () => {
+  AOS.init();
+
   const [loading, setLoading] = useState(false);
   const [hotCollectionList, setHotCollectionList] = useState([]);
 
@@ -27,7 +30,10 @@ const HotCollections = () => {
 
   return (
     <section id="section-collections" className="no-bottom">
-      <div className="container">
+      <div className="container"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-delay="50">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">

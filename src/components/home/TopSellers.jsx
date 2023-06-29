@@ -2,8 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Skeleton from "../UI/Skeleton";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const TopSellers = () => {
+  AOS.init();
+
   const [loading, setLoading] = useState(false);
   const [topSellers, setTopSellers] = useState([]);
 
@@ -25,7 +29,10 @@ const TopSellers = () => {
 
   return (
     <section id="section-popular" className="pb-5">
-      <div className="container">
+      <div className="container"
+      data-aos="zoom-in-up"
+      data-aos-easing="ease-in"
+      data-aos-delay="100">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
