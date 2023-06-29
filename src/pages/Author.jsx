@@ -22,6 +22,7 @@ const Author = () => {
       );
       setAuthor(data);
       setIncreaseFollowers(data.followers);
+      console.log("data at Author", data);
     } finally {
       setLoading(false);
     }
