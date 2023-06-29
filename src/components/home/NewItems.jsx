@@ -3,8 +3,12 @@ import React, { useEffect, useState } from "react";
 import ReactOwlCarousel from "react-owl-carousel";
 import ItemsSkeleton from "../UI/ItemsSkeleton";
 import NewItemCard from "../UI/NewItemCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const NewItems = () => {
+  AOS.init();
+
   const [loading, setLoading] = useState(false);
   const [newItems, setNewItems] = useState([]);
 
@@ -26,7 +30,10 @@ const NewItems = () => {
 
   return (
     <section id="section-items" className="no-bottom">
-      <div className="container">
+      <div className="container"
+      data-aos="fade-up"
+      data-aos-easing="ease"
+      data-aos-delay="50">
         <div className="row">
           <div className="col-lg-12">
             <div className="text-center">
