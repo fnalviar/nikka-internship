@@ -62,9 +62,7 @@ const NewItems = () => {
               }}
             >
               {new Array(4).fill(0).map((_, index) => (
-                <div
-                  key={index}
-                >
+                <div key={index}>
                   <ItemsSkeleton />
                 </div>
               ))}
@@ -99,7 +97,7 @@ const NewItems = () => {
             >
               {newItems &&
                 newItems.map((newNFT) => {
-                  return <NewItemCard nft={newNFT} />;
+                  return <NewItemCard key={newNFT.nftId} nft={newNFT} />;
                 })}
             </ReactOwlCarousel>
           )}
